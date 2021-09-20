@@ -1,6 +1,12 @@
 body {
     font-family: sans-serif;
   }
+
+ #menu{
+    position:relative;
+    margin-left: 1250px;
+  }
+
   .respmenu a {
     color: inherit;
     text-decoration: none;
