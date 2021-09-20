@@ -1,14 +1,30 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html lang="es">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
 </head>
 <body>
+
     <h1>Registro</h1>
     <form action="" id="form-registro" method="POST">
+        <label for="nombre">Nombre</label><br> <!--etiqueta nombre unido con el input de nombre-->
+        <input id="nombre" type="texto" name="name"><br> <!--Input nombre-->
+        
+        <label >Genero</label><br> <!-- etiqueta de genero-->
+        <input id="hombre" type="radio" name="color"> <!--Input opcion de hombre-->
+        <label for="hombre">M</label> <!--Etiqueta M (Hombre)-->
+        <input id="mujer" type="radio" name="color"> <!--Input opcion de mujer-->
+        <label for="mujer">F</label><br> <!--Etiqueta F (Mujer)-->
+        
+        <label for="telefono">Teléfono</label><br> <!--etiqueta telefono unido con el input de telefono-->
+        <input id="telefono" type="texto" name="telefono"> <!--Input telefono-->
+
+
+
+    
         <label for="direccion">Dirección:</label><br>
         <input type="text" id="direccion" required="true" placeholder="Escribe tu dirección"><br>
         <label for="correo">Correo:</label><br>
@@ -16,6 +32,7 @@
         <label for="contrasena" >Contraseña:</label><br>
         <input type="password" name="" id="contrasena" required="true"><br>
         <input type="submit" value="Registrar" id="btn-submit-form">
+
     </form>
 </body>
 </html>
