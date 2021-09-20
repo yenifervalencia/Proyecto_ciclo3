@@ -8,14 +8,13 @@
 </head>
 <body>
     <h1>Registro</h1>
-    <form action="" id="form-registro">
-
-        <label for="" id="label-direccion">Dirección:</label><br>
-        <input type="text" id="input-direccion"><br>
-        <label for="" id="label-correo">Correo:</label><br>
-        <input type="email" name="" id="input-correo"><br>
-        <label for="" id="label-contrasena">Contraseña:</label><br>
-        <input type="password" name="" id="input-contrasena"><br>
+    <form action="" id="form-registro" method="POST">
+        <label for="direccion">Dirección:</label><br>
+        <input type="text" id="direccion" required="true" placeholder="Escribe tu dirección"><br>
+        <label for="correo">Correo:</label><br>
+        <input type="email" name="" id="correo" required="true" placeholder="Escribe tu correo"><br>
+        <label for="contrasena" >Contraseña:</label><br>
+        <input type="password" name="" id="contrasena" required="true"><br>
         <input type="submit" value="Registrar" id="btn-submit-form">
     </form>
 </body>
