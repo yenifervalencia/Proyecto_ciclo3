@@ -1,13 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("form-registro").addEventListener('submit', checkDir); //es la manera de decir que esta funcion checkDir es para el formulario de id=form-registro
-    // para agregar otra funcion a este documento debe repetir la linea de ariba pero cambiando el nombre de la funcion
-    document.getElementById("form-registro").addEventListener('submit', checkGen); //verifica la funcion chekGen osea verifica que tenga un genero seleccionado
     document.getElementById("form-registro").addEventListener('submit',checkNombre) //VERIFICA LA FUNCION CHECKNAME Y SUS PARAMETROS
+    document.getElementById("form-registro").addEventListener('submit', checkGen); //verifica la funcion chekGen osea verifica que tenga un genero seleccionado
+    document.getElementById("form-registro").addEventListener('submit', checkTelefono);
+    document.getElementById("form-registro").addEventListener('submit', checkDir); //es la manera de decir que esta funcion checkDir es para el formulario de id=form-registro
+    document.getElementById("form-registro").addEventListener('submit', checkCorreo);
+    // para agregar otra funcion a este documento debe repetir la linea de ariba pero cambiando el nombre de la funcion
+    
+   
+  
+    
   });  
   validacionNombre=/^[a-zA-ZÀ-ÿ\s]{1,30}$/; // Esta formula valida que no se supere de 30 caracteres o sea menos de un caracter,ademas de que permite validar que solo sean Letras y espacios,pueden llevar acentos.
-
   direccionCorrect=/^[a-zA-Z0-9\#\-]{1,50}$/; //es el parametro que me permite decir que acepta letras y numeros y los caracteres especiales #- y de 1 a 50 cantidad
-
+  correoCorrect = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+  telefonoCorrect = /^\d{7}$/;
 
   function checkNombre(valor) { //FUNCION QUE PERMITE VALIDAR EL NOMBRE
       valor.preventDefault();
@@ -19,11 +25,30 @@ document.addEventListener("DOMContentLoaded", function() {
           alert('El nombre no cumple con los parametros establecidos');
           return false;
       }
+  } 
+
+function checkGen(valor){
+    valor.preventDefault();
+  if(!document.querySelector('input[name="color"]:checked')==true) {//si hay algun selector activo arroja false
+    alert("Seleccione por favor un genero");
+      return false;
+    }else{
+        return true;
+}
+
+}
+
+function checkTelefono(valor){
+  valor.preventDefault();
+  var telefono = document.getElementById('telefono').value;
+  if(telefonoCorrect.test(telefono)){
+    alert("Telefono correcto");
+    return true;
+  } else {
+    alert("Telefono no válido");
+    return false;
   }
-
- 
-
- 
+}
 
   function checkDir(valor) { //mi Funcion
     valor.preventDefault();
@@ -38,16 +63,22 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 //module.exports=checkDir; lo puse asi por q tira error aun no se por q
 
-function checkGen(valor){
-    valor.preventDefault();
-  if(!document.querySelector('input[name="color"]:checked')==true) {//si hay algun selector activo arroja false
-    alert("Seleccione por favor un genero");
-      return false;
-    }else{
-        return true;
-}
 
-}
+
+
+
+function checkCorreo(valor){
+  valor.preventDefault();
+  var correo = document.getElementById('correo').value;
+  if(correoCorrect.test(correo)){
+    alert("Correo correcto");
+    return true;
+  } else {
+    alert("Correo incorrecto");
+    return false;
+  }
+} 
+
 
 
 
