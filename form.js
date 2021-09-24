@@ -21,6 +21,10 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   }
 
+ 
+
+ 
+
   function checkDir(valor) { //mi Funcion
     valor.preventDefault();
     var direccion=document.getElementById('direccion').value; //captura el valor del input del resgistro.html
@@ -42,4 +46,8 @@ function checkGen(valor){
     }else{
         return true;
 }
+
 }
+
+
+
