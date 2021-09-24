@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Venta Motos</title>
-        <link href="estilos.css" rel="stylesheet">
+        <link href="estilos.css" rel="stylesheet">  
     </head>
     <body>
         <div class="respmenu">
@@ -18,9 +18,24 @@
                     <a href="#news">Catalogo</a>
                     <a href="#contact">Contacto</a>
                     <a href="#about">Acerca de nosotros</a>
+                    <script>
+                        var letras="abcdefghyjklmnñopqrstuvwxyz";
+                        var texto= "Hola";
+                         for(i=0; i<texto.length; i++){
+                            if (letras.indexOf(texto.charAt(i),0)!=-1){
+                                alert("si tiene");
+                               return 1;
+                            }
+                            else{
+                                alert("f");
+                            }
+                         }
+                         return 0;
+ 
+                    </script>
                 </ul>
             </nav>
-        </div>               
+        </div>  
     </body>
 
     
