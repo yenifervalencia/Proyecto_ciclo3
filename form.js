@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });  
 //AL momento de subir este archivo para calificacion del boot deben comentar toda la funcion de arriba la del documen.addEventListener 
 
-  validacionNombre=/^[a-zA-ZÀ-ÿ\s]{1,30}$/; // Esta formula valida que no se supere de 30 caracteres o sea menos de un caracter,ademas de que permite validar que solo sean Letras y espacios,pueden llevar acentos.
+  validacionNombre=/^[a-zA-ZÀ-ÿ\s]{4,30}$/; // Esta formula valida que no se supere de 30 caracteres o sea menos de un caracter,ademas de que permite validar que solo sean Letras y espacios,pueden llevar acentos.
   direccionCorrect=/^[a-zA-Z0-9\s\#\-]{1,50}$/; //es el parametro que me permite decir que acepta letras y numeros y los caracteres especiales #- y de 1 a 50 cantidad
   correoCorrect = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
   telefonoCorrect = /^\d{7}$/;
