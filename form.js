@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("form-registro").addEventListener('submit', checkTelefono);
     document.getElementById("form-registro").addEventListener('submit', checkDir); //es la manera de decir que esta funcion checkDir es para el formulario de id=form-registro
     document.getElementById("form-registro").addEventListener('submit', checkCorreo);
+    document.getElementById("form-registro").addEventListener('submit', checkContrasena);
     // para agregar otra funcion a este documento debe repetir la linea de ariba pero cambiando el nombre de la funcion
      
     
@@ -14,8 +15,9 @@ document.addEventListener("DOMContentLoaded", function() {
   direccionCorrect=/^[a-zA-Z0-9\s\#\-]{1,50}$/; //es el parametro que me permite decir que acepta letras y numeros y los caracteres especiales #- y de 1 a 50 cantidad
   correoCorrect = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
   telefonoCorrect = /^\d{7}$/;
+  contraCorrect = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9!@#$%^ñ&*]{8,25}$/;
 
-  function checkNombre() { //FUNCION QUE PERMITE VALIDAR EL NOMBRE
+  function checkNombre() { //FUNCION QUE PERMITE VALIDAR EL NOMBRE hecho por Valeria
             var nombre = document.getElementById('nombre').value; //TOMA EL VALOR DEL INPUT,NO PERMITE QUE QUEDE EL CAMPO VACIO
       if(validacionNombre.test(nombre)){ //SI SE CUMPLEN LOS PARAMETROS DE LA FORMULA PUESTA EN LA PARTE SUPERIOS,SE VA RETORNAR UN VALOR TRUE
           return true;
@@ -26,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   } 
 
-function checkGen(){
+function checkGen(){ // funcion de validar que se ha seleccionado un genero hecho por Miguel
    if(!document.querySelector('input[name="color"]:checked')==true) {//si hay algun selector activo arroja false
     alert("Seleccione por favor un genero");
       return false;
@@ -36,7 +38,7 @@ function checkGen(){
 
 }
 
-function checkTelefono(){
+function checkTelefono(){ //funcion validar telefono hecho por Mauricio
    var telefono = document.getElementById('telefono').value;
   if(telefonoCorrect.test(telefono)){
     alert("Telefono correcto");
@@ -47,7 +49,7 @@ function checkTelefono(){
   }
 }
 
-  function checkDir() { //mi Funcion
+  function checkDir() { // Funcion validar direccion hecho por Yenifer
     var direccion=document.getElementById('direccion').value; //captura el valor del input del resgistro.html
     if(direccionCorrect.test(direccion)){ //hace la comparacion que direccion cumpla con los parametros de direccionCorrect
       return true;
@@ -63,7 +65,7 @@ function checkTelefono(){
 
 
 
-function checkCorreo(){
+function checkCorreo(){ //funcion validar correo hecho por Mauricio
   var correo = document.getElementById('correo').value;
   if(correoCorrect.test(correo)){
     alert("Correo correcto");
@@ -72,6 +74,17 @@ function checkCorreo(){
     alert("Correo incorrecto");
     return false;
   }
+} 
+
+//Validar Contraseña hecho por Julio
+function checkContrasena(){
+    var contra = document.getElementById("contrasena").value;
+    if(contraCorrect.test(contra)){
+      return true;} 
+    else {
+      alert("Contraseña no válida");
+      return false; }
+      
 } 
 
 
