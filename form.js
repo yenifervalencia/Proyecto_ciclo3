@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
     valor.preventDefault();
     var direccion=document.getElementById('direccion').value; //captura el valor del input del resgistro.html
     if(direccionCorrect.test(direccion)){ //hace la comparacion que direccion cumpla con los parametros de direccionCorrect
-      alert('direccion correcta');
       return true;
     }else{
     
@@ -20,9 +19,12 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 //module.exports=checkDir; lo puse asi por q tira error aun no se por q
 
-function checkGen(){
+function checkGen(valor){
+    valor.preventDefault();
   if(!document.querySelector('input[name="color"]:checked')==true) {//si hay algun selector activo arroja false
     alert("Seleccione por favor un genero");
-    }
+      return false;
+    }else{
+        return true;
 }
 
