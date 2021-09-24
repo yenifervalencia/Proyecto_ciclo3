@@ -75,6 +75,7 @@ function checkCorreo(){
 } 
 
 
-module.exports = { checkGen, checkDir, checkCorreo, checkTelefono, checkNombre, checkContrasena };
+//module.exports = { checkGen, checkDir, checkCorreo, checkTelefono, checkNombre, checkContrasena };
+// descomentar lo de arriba de module.exports al momento de subirlo al boot
 
 
