@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("form-registro").addEventListener('submit',filtrarCorreo)
+});
+
 function agregarRegistro(){
 	function capturar(){
 		function Persona(nombre) {
@@ -13,4 +17,10 @@ function agregarRegistro(){
 		arreglo.push(nuevoCliente);
 		console.log(arreglo);
 	}
+}
+
+
+function filtrarCorreo(){
+    let filtro=arregloo.filter((arregloo) => arregloo.correo.includes("@gmail.com"));
+    console.log(filtro);    
 }
