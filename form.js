@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
   } 
 
 function checkGen(){ // funcion de validar que se ha seleccionado un genero hecho por Miguel
-   if(!document.querySelector('input[name="color"]:checked')==true) {//si hay algun selector activo arroja false
+   if(!document.querySelector('input[name="sexo"]:checked')==true) {//si hay algun selector activo arroja false
     alert("Seleccione por favor un genero");
       return false;
     }else{
