@@ -47,62 +47,14 @@
           /><br />
           <label for="contrasena">Contraseña:</label><br />
           <input type="password" name="" id="contrasena" /><br />
-          <input type="submit" value="Registrar" id="btn-submit-form" />
+          <input type="submit" class="sub" value="Registrar" id="btn-submit-form" onclick="conseguirDatos();">
         </form>
       </div>
     </div>
 
     <script src="form.js"></script>
-	  <script src="registro.js"></script>
+	  <script type="text/javascript" src="registro.js"></script>
   </body>
 
-  <script>
-    /* function capturar() {
-      //console.log("Capturado");
-      function Persona(
-        nombre,
-        genero,
-        telefono,
-        direccion,
-        correo,
-        contrasena
-      ) {
-        this.nombre = nombre;
-        this.genero = genero;
-        this.telefono = telefono;
-        this.direccion = direccion;
-        this.correo = correo;
-        this.contrasena = contrasena;
-      }
-      var nombreCapturar = document.getElementById("nombre").value;
-      //console.log(nombreCapturar);
-      var generoCapturar = document.getElementById("genero").value;
-      //console.log(generoCapturar);
-      var telefonoCapturar = document.getElementById("telefono").value;
-      //console.log(telefonoCapturar);
-      var direccionCapturar = document.getElementById("direccion").value;
-      //console.log(direccionCapturar);
-      var correoCapturar = document.getElementById("correo").value;
-      //console.log(correoCapturar);
-      var contrasenaCapturar = document.getElementById("contrasena").value;
-      //console.log(contrasenaCapturar);
 
-      nuevoCliente = new Persona(
-        nombreCapturar,
-        generoCapturar,
-        telefonoCapturar,
-        direccionCapturar,
-        correoCapturar,
-        contrasenaCapturar
-      );
-      console.log(nuevoCliente);
-	  agregar();
-    }
-	var arreglo = []; 
-	function agregar(){
-		arreglo.push(nuevoCliente);
-		console.log(arreglo);
-	} */
-    agregarRegistro();
-  </script>
 </html>
