@@ -3,34 +3,60 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-function conseguirDatos(){
-    function Persona(nombre,sexo,telefono,direccion,correo,contrasena){
-        this.nombre=nombre;
-		this.sexo=sexo;
-        this.telefono=telefono;
-        this.direccion=direccion;
-        this.correo=correo;
-        this.contrasena=contrasena;
+let registros = []; 
+
+function agregar(){
+    //console.log("Capturado");
+    function Persona(
+      nombreP,
+     
+      telefonoP,
+      direccionP,
+      correoP,
+      contrasenaP
+    ) {
+      this.nombreP = nombreP;
+      
+      this.telefonoP = telefonoP;
+      this.direccionP = direccionP;
+      this.correoP = correoP;
+      this.contrasenaP = contrasenaP;
     }
-     datoNombre = document.getElementById('nombre').value;
-     datoGenero = document.querySelector('input[name="sexo"]:checked').value;
-     datoTelefono = document.getElementById('telefono').value;
-    datoDireccion=document.getElementById('direccion').value;
-    datoCorreo = document.getElementById('correo').value;
-    datoContrasena = document.getElementById('contrasena').value;
-    nuevoCliente = new Persona(datoNombre,datoGenero,datoTelefono,datoDireccion,datoCorreo,datoContrasena);
+    var nombre= document.getElementById("nombre").value;
+    //console.log(nombreCapturar);
+   
+    //console.log(generoCapturar);
+    var telefono = document.getElementById("telefono").value;
+    //console.log(telefonoCapturar);
+    var direccion = document.getElementById("direccion").value;
+    //console.log(direccionCapturar);
+    var correo = document.getElementById("correo").value;
+    //console.log(correoCapturar);
+    var contrasena = document.getElementById("contrasena").value;
+    //console.log(contrasenaCapturar);
+    nuevoCliente = new Persona(
+      nombre,    
+      telefono,
+      direccion,
+      correo,
+      contrasena
+    );
+    //console.log(nuevoCliente);
+   
+  
+  
+      registros.push(nuevoCliente);
+      registros.forEach((e) => {
+        console.log(e);
+    });
+      
+  }
 
-	console.log(nuevoCliente);
-    agregarRegistro();
-}
-var arreglo = [];
-function agregarRegistro(){
-	arreglo.push(nuevoCliente);
-	console.log(arreglo);
-}
 
-
-function filtrarCorreo(){
-    let filtro=arregloo.filter((arregloo) => arregloo.correo.includes("@gmail.com"));
-    console.log(filtro);    
+function filtrarCorreo(registros){
+    let filtro=registros.filter((arregloo) => arregloo.correo.includes("@gmail.com"));
+	filtro.forEach(element => {
+        console.log(element);
+    });
+	return filtro;      
 }
