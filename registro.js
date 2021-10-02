@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 let registros = []; 
 
-function agregar(){
+function agregarRegistro(){
     //console.log("Capturado");
     function Persona(
       nombreP,
