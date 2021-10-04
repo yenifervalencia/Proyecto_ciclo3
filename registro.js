@@ -60,3 +60,20 @@ function filtrarCorreo(registros){
     });
 	return filtro;      
 }
+
+function ordenarArreglo(arreglo){
+  n = 0;
+  z = 0;
+  arreglo.sort(function (a, b) {
+    if (a.Nombre > b.Nombre) {
+      return 1;
+    }
+    if (a.Nombre < b.Nombre) {
+      return -1;
+    }
+    // a must be equal to b
+    return 0;
+  });
+  console.log(arreglo);
+  return arreglo;
+  }
