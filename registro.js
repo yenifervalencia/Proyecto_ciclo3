@@ -62,8 +62,6 @@ function filtrarCorreo(registros){
 }
 
 function ordenarArreglo(arreglo){
-  n = 0;
-  z = 0;
   arreglo.sort(function (a, b) {
     if (a.Nombre > b.Nombre) {
       return 1;
