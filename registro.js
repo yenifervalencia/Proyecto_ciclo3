@@ -57,3 +57,6 @@ function ordenarArreglo(arreglo){
   console.log(arreglo);
   return arreglo;
   }
+
+module.exports = { agregarRegistro, filtrarCorreo, ordenarArreglo, registros };
+
