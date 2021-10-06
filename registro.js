@@ -58,5 +58,6 @@ function ordenarArreglo(arreglo){
   return arreglo;
   }
 
-module.exports = { agregarRegistro, filtrarCorreo, ordenarArreglo, registros };
+//module.exports = { agregarRegistro, filtrarCorreo, ordenarArreglo, registros };
+//descomentar el module para subir al bot
 
