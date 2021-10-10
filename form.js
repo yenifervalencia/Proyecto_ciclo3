@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+/*document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("form-registro").addEventListener('submit',checkNombre) //VERIFICA LA FUNCION CHECKNAME Y SUS PARAMETROS
     document.getElementById("form-registro").addEventListener('submit', checkGen); //verifica la funcion chekGen osea verifica que tenga un genero seleccionado
     document.getElementById("form-registro").addEventListener('submit', checkTelefono);
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // para agregar otra funcion a este documento debe repetir la linea de ariba pero cambiando el nombre de la funcion
      
     
-  });  
+  }); */ 
 //AL momento de subir este archivo para calificacion del boot deben comentar toda la funcion de arriba la del documen.addEventListener 
 
   validacionNombre=/^[a-zA-ZÀ-ÿ\s]{4,30}$/; // Esta formula valida que no se supere de 30 caracteres o sea menos de un caracter,ademas de que permite validar que solo sean Letras y espacios,pueden llevar acentos.
@@ -88,7 +88,7 @@ function checkContrasena(){
 } 
 
 
-//module.exports = { checkGen, checkDir, checkCorreo, checkTelefono, checkNombre, checkContrasena };
+module.exports = { checkGen, checkDir, checkCorreo, checkTelefono, checkNombre, checkContrasena };
 // descomentar lo de arriba de module.exports al momento de subirlo al boot
 
 
