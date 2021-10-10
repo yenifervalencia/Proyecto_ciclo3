@@ -64,6 +64,6 @@ SET time_zone = "+00:00";
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 -- este es el comando para seleccionar id a partir del correo gmail.com
-SELECT nombre, genero, telefono, direccion, correo, contrasena FROM usuarios WHERE correo LIKE '%gmail.com%';
+SELECT * FROM usuarios WHERE Correo LIKE '%gmail.com';
 
 
