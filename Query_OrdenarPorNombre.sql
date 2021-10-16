@@ -1,1 +1,1 @@
-select nombre,telefono,direccion,correo from Usuarios orden by nombre asc
+SELECT Nombre,Telefono,Direccion,Correo FROM Usuarios ORDER BY Nombre ASC;
