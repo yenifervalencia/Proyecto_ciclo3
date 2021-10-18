@@ -29,3 +29,18 @@ function login() {
 
     
 }
+
+function validarCaptcha(mainCaptcha, txtInput) {
+    mainCaptcha = 'ocaso';
+    var string1 = removeSpaces(getElementValue(mainCaptcha));
+    var string2 = removeSpaces(getElementValue(txtInput));
+    document.write(string2.toLowerCase());
+    if (string1 == string2) {
+      return true;
+    } else {
+      Captcha(mainCaptcha);
+      return false;
+    }
+  }
+
+}
