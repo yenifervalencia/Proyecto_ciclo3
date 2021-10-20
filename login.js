@@ -42,5 +42,27 @@ function validarCaptcha(mainCaptcha, txtInput) {
       return false;
     }
   }
-
-}
+function agregarRegistro(){
+  let nombreUsu= document.getElementById("nombre").value;
+   let telefonoUsu = document.getElementById("telefono").value;
+   let direccionUsu = document.getElementById("direccion").value;
+   let correoUsu = document.getElementById("correo").value;
+   let contrasenaUsu = document.getElementById("contrasena").value;
+ 
+   let nuevoCliente = {
+     "nombre": nombreUsu,
+       //    "genero": generoUsu,
+       "telefono": telefonoUsu,
+       "direccion": direccionUsu,
+       "correo": correoUsu,
+       "password": contrasenaUsu
+   }
+  
+ 
+ 
+     registros.push(nuevoCliente);
+     registros.forEach((e) => {
+       console.log(e);
+   });
+     
+ }
