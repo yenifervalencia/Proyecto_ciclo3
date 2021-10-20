@@ -1,4 +1,3 @@
-
 /*document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("form-registro").addEventListener('submit',filtrarCorreo)
 });*/
